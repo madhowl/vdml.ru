@@ -8,6 +8,6 @@ class CategoryPresenter extends Presenter
 {
     public function categoryName(): string
     {
-        return $this->entity->category->title;
+        return $this->entity->category->name;
     }
 }

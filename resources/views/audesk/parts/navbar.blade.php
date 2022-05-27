@@ -2,7 +2,7 @@
     <!-- Menu For Mobile Device -->
     <div class="mobile-nav">
         <a href="index.html" class="logo">
-            <img src="{{asset('/assets/img/logo.png')}}" alt="Logo">
+            <img src="{{asset('/assets/img/logo1.png')}}" alt="Logo">
         </a>
     </div>
 
@@ -11,43 +11,21 @@
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-light">
                 <a class="navbar-brand" href="index.html">
-                    <img src="{{asset('/assets/img/logo.png')}}" alt="Logo">
+                    <img src="{{asset('/assets/img/logo1.png')}}" alt="Logo">
                 </a>
                 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link dropdown-toggle">Home</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="index.html" class="nav-link">Home Page One</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="index-2.html" class="nav-link">Home Page Two</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="index-3.html" class="nav-link">Home Page Three</a>
-                                </li>
-                            </ul>
+                            <a href="/" class="nav-link ">Каталог</a>
                         </li>
                         <li class="nav-item">
-                            <a href="about.html" class="nav-link">About</a>
+                            <a href="about.html" class="nav-link">О компании</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link dropdown-toggle">Services</a>
-                            <ul class="dropdown-menu">
-                                <li class="nav-item">
-                                    <a href="service.html" class="nav-link">Service</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="service-details.html" class="nav-link">Service Details</a>
-                                </li>
-                            </ul>
+                            <a href="#" class="nav-link">Контакты</a>
                         </li>
                         <li class="nav-item">
-                            <a href="pricing.html" class="nav-link">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link dropdown-toggle active">Blog</a>
+                            <a href="#" class="nav-link dropdown-toggle active">Новости</a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
                                     <a href="blog.html" class="nav-link active">Blog</a>
@@ -98,16 +76,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="contact.html" class="nav-link">Contact</a>
-                        </li>
                     </ul>
-                </div>
-                <div class="cmn-btn">
-                    <a class="banner-btn-left" href="sign-in.html">
-                        <i class='bx bxs-user-plus'></i>
-                        Sign In
-                    </a>
                 </div>
             </nav>
         </div>

@@ -57,20 +57,20 @@
 <!-- Footer -->
 <footer class="footer-area-two pt-100">
     <div class="footer-img">
-        <img src="assets/img/home-one/footer-car.png" alt="Footer">
+        <img src="assets/img/12.png" alt="Footer">
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 col-lg-3">
+            <div class="col-sm-6 col-lg-6">
                 <div class="footer-item">
                     <div class="footer-logo">
                         <a href="index.html">
-                            <img src="assets/img/logo-two.png" alt="Logo">
+                            <img src="assets/img/logo1.png" alt="Logo">
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam nobis et praesentium architecto ex laudantium voluptates in dolore</p>
+                        <p>Владметалл - поставщик промышленного оборудования для предприятий пищевой промышленности</p>
                         <ul>
                             <li>
-                                <a href="#" target="_blank">
+                                <a href="https://www.youtube.com/user/StDmitry1/videos" target="_blank">
                                     <i class='bx bxl-youtube'></i>
                                 </a>
                             </li>
@@ -93,115 +93,38 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="footer-item">
-                    <div class="footer-service">
-                        <h3>Services</h3>
-                        <ul>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bx-chevron-right'></i>
-                                    Automobile
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bx-chevron-right'></i>
-                                    Tyre Service
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bx-chevron-right'></i>
-                                    Repair Service
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bx-chevron-right'></i>
-                                    Engine Service
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class='bx bx-chevron-right'></i>
-                                    System Service
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
-                <div class="footer-item">
-                    <div class="footer-service">
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li>
-                                <a href="index.html" target="_blank">
-                                    <i class='bx bx-chevron-right'></i>
-                                    Home
-                                </a>
-                            </li>
-                            <li>
-                                <a href="about.html" target="_blank">
-                                    <i class='bx bx-chevron-right'></i>
-                                    About Us
-                                </a>
-                            </li>
-                            <li>
-                                <a href="blog.html" target="_blank">
-                                    <i class='bx bx-chevron-right'></i>
-                                    Blogs
-                                </a>
-                            </li>
-                            <li>
-                                <a href="engineer.html" target="_blank">
-                                    <i class='bx bx-chevron-right'></i>
-                                    Team
-                                </a>
-                            </li>
-                            <li>
-                                <a href="testimonial.html" target="_blank">
-                                    <i class='bx bx-chevron-right'></i>
-                                    Testimonials
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-3">
+            <div class="col-sm-6 col-lg-6">
                 <div class="footer-item">
                     <div class="footer-service footer-find">
-                        <h3>Find Us</h3>
+                        <h3>Адрес:</h3>
                         <ul>
                             <li>
                                 <i class='bx bx-location-plus'></i>
-                                28/A Street, New York City
+                                ул. Толстого, 30 офис 303
+                                Ленинский район, Владивосток, 690014
                             </li>
                             <li>
                                 <i class='bx bx-phone-call'></i>
-                                <a href="tel:+880123456789">
-                                    +88 0123 456 789
+                                <a href="">
+                                    +7 (423) 207‒87‒52
                                 </a>
                             </li>
                             <li>
                                 <i class='bx bx-phone-call'></i>
-                                <a href="tel:+880563246378">
-                                    +88 0563 246 378
+                                <a href="">
+                                    +7‒950‒290‒29‒50
                                 </a>
                             </li>
                             <li>
                                 <i class='bx bx-mail-send'></i>
-                                <a href="mailto:info@audeck.com">
-                                    info@audeck.com
+                                <a href="mailto:vdml@list.ru">
+                                    vdml@list.ru (Основной)
                                 </a>
                             </li>
                             <li>
                                 <i class='bx bx-mail-send'></i>
-                                <a href="mailto:hello@audeck.com">
-                                    hello@audeck.com
+                                <a href="mailto:manager-vdml@list.ru">
+                                    manager-vdml@list.ru (Отдел продаж)
                                 </a>
                             </li>
                         </ul>
@@ -213,7 +136,7 @@
             <div class="row">
                 <div class="col-lg-7">
                     <div class="copyright-item">
-                        <p>Copyright ©2021 Audeck. Designed By <a href="https://hibootstrap.com/" target="_blank">HiBootstrap</a></p>
+                        <p>Copyright ©2022 VDML. Designed By <a href="https://bootstrap.com/" target="_blank">Bootstrap</a></p>
                     </div>
                 </div>
                 <div class="col-lg-5">
