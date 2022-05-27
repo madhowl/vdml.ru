@@ -28,7 +28,7 @@ class Product extends Component
     public function render()
     {
         return view('livewire.product')
-            ->extends('shop.product')
-            ->section('content');
+            ->extends('audesk.product')
+            ->section('product');
     }
 }

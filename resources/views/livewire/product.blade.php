@@ -25,11 +25,11 @@
                                         <div class="prices">
                                             <span class="price">{{$product->price}} руб.</span>
                                         </div>
-                                        <p>{{$product->description}}</p>
+                                        <p>{{$product->short_description}}</p>
                                         <div class="product-action-simple">
                                             <div class="payment-button">
                                                 <a wire:click.prevent="$emit('showModal', '{{$product->name}}')"
-                                                   href="#/" class="btn-payment">Запросить стоимость</a>
+                                                   href="/" class="btn-payment">Запросить стоимость</a>
                                             </div>
                                         </div>
                                     </div>
