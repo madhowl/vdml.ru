@@ -19,11 +19,12 @@ use App\Http\Livewire\Cart;
 Route::get('/', function () {
     return view('audesk.categories');
 });*/
-Route::get('/product/{id}', App\Http\Livewire\Product::class);
+Route::get('/product/{slug}', App\Http\Livewire\Product::class)->name('product');
 Route::get('/',[\App\Http\Controllers\FrontController::class,'catalogGrid']);
-Route::get('/cart3', function () {
+Route::get('/category/{slug}',[\App\Http\Controllers\FrontController::class,'productInCategoryGrid'])->name('productInCategoryGrid');
+/*Route::get('/cart3', function () {
     return view('cart');
-});
+});*/
 Route::get('/about', function () {
     return view('about');
 });

@@ -10,13 +10,13 @@
                 <div class="col-sm-6 col-lg-4">
                     <div class="blog-item">
                         <div class="blog-top">
-                            <a href="/category/{{$item->slug}}">
+                            <a href="/product/{{$item->slug}}">
                                 <img src="{{$item->image}}" alt="{{$item->name}}">
                             </a>
                         </div>
                         <div class="blog-bottom">
                             <h3>
-                                <a href="/category/{{$item->slug}}">
+                                <a href="/product/{{$item->slug}}">
                                     {{$item->name}}
                                 </a>
                             </h3>

@@ -20,14 +20,14 @@ class Product extends Component
         ]);
     }
 
-    public function mount($id)
+    public function mount($slug)
     {
-        $this->product = \App\Models\Product::find($id);
+        $this->product = \App\Models\Product::where('slug',$slug)->first();
     }
 
     public function render()
     {
-        return view('livewire.product')
+        return view('livewire.product',['page_title'=>$this->product->name])
             ->extends('audesk.product')
             ->section('product');
     }

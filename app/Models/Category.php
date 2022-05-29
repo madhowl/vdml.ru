@@ -13,7 +13,8 @@ class Category extends Model
     use HasFactory,AsSource, Filterable;
 
     protected $fillable = [
-        'title'
+        'title',
+        'slug'
     ];
     /**
      * Name of columns to which http sorting can be applied
@@ -23,7 +24,7 @@ class Category extends Model
     protected $allowedSorts = [
         'title',
     ];
-    public function product()
+    public function products()
     {
         return $this->hasMany(Product::class);
     }
