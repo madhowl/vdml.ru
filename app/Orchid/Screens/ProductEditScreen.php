@@ -106,27 +106,31 @@ class ProductEditScreen extends Screen
     {
         return [
             Layout::rows([
-                Input::make('product.title')
-                    ->title('Title')
-                    ->placeholder('Attractive but mysterious title'),
+                Input::make('product.name')
+                    ->title('Название')
+                    ->placeholder('Введите название товара'),
 
 
-                TextArea::make('product.description')
-                    ->title('Description')
+                Quill::make('product.short_description')
+                    ->title('Краткое описание')
                     ->rows(3)
                     ->maxlength(200)
-                    ->placeholder('Brief description for preview'),
+                    ->placeholder('Введите краткое описание'),
 
                 Relation::make('product.category_id')
-                    ->title('Category')
-                    ->fromModel(Category::class, 'title'),
-                Input::make('product.cost')
-                    ->title('Cost')
-                    ->placeholder('Attractive but mysterious title'),
+                    ->title('Категория')
+                    ->fromModel(Category::class, 'name'),
+                Input::make('product.price')
+                    ->title('Стоимость')
+                    ->placeholder('укажите стоимость товара'),
               //  Quill::make('product.body')
                    // ->title('Main text'),
                 Picture::make('product.image')
-                    ->title('All files')
+                    ->title('All files'),
+                TextArea::make('product.description')
+                    ->title('Описание')
+                    ->rows(5)
+                    ->placeholder('Введите описание'),
             ])
             ];
 

@@ -34,7 +34,7 @@ class CategoryListScreen extends Screen
      */
     public function name(): ?string
     {
-        return 'CategoryListScreen';
+        return 'Список категорий';
     }
 
     /**
@@ -44,7 +44,7 @@ class CategoryListScreen extends Screen
      */
     public function commandBar(): array
     {
-        return [  Link::make('Create new')
+        return [  Link::make('Создать категорию')
             ->icon('pencil')
             ->route('platform.category.edit')];
     }

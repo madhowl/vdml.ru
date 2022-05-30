@@ -15,7 +15,7 @@ class ProductListLayout extends Table
      * @var array
      */
     protected $allowedFilters = [
-        'title',
+        'name',
     ];
 
     /**
@@ -33,15 +33,15 @@ class ProductListLayout extends Table
         return [
             TD::make('id', 'Id')
                 ->sort(),
-            TD::make('title', 'Title')
+            TD::make('name', 'Наименование товара')
                 ->sort()
                 ->filter(TD::FILTER_TEXT)
                 ->render(function (Product $product) {
-                    return Link::make($product->title)
+                    return Link::make($product->name)
                         ->route('platform.product.edit', $product);
                 }),
-            TD::make('cost', 'Cost')
-                ->sort(),
+//            TD::make('price', 'Стоимость')
+//                ->sort(),
             TD::make('category_id', 'Category')
                 ->render(function (Product $product){
                     return $product->presenter()->categoryName();
@@ -51,7 +51,8 @@ class ProductListLayout extends Table
                 ->render(function (Product $product){
                     return "<img src='{$product->image}'
                               alt='sample'
-                              class='mw-100 d-block img-fluid img-thumbnail'>";
+                              class='d-block img-fluid img-thumbnail'
+                              style='max-width: 250px'>";
             }),
 
            /* TD::make('created_at', 'Created')

@@ -15,7 +15,7 @@ class CategoryListLayout extends Table
      * @var array
      */
     protected $allowedFilters = [
-        'title',
+        'name',
     ];
 
     /**
@@ -33,12 +33,19 @@ class CategoryListLayout extends Table
         return [
             TD::make('id', 'Id')
                 ->sort(),
-            TD::make('title', 'Title')
+            TD::make('name', 'Название категории')
                 ->sort()
                 ->filter(TD::FILTER_TEXT)
                 ->render(function (Category $category) {
-                    return Link::make($category->title)
+                    return Link::make($category->name)
                         ->route('platform.category.edit', $category);
+                }),
+            TD::make('image', 'Изображение категории')
+                ->render(function (Category $category){
+                    return "<img src='{$category->image}'
+                              alt='sample'
+                              class='d-block img-fluid img-thumbnail'
+                              style='max-width: 150px'>";
                 }),
         ];
     }

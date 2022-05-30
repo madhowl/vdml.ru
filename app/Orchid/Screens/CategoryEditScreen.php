@@ -28,7 +28,7 @@ class CategoryEditScreen extends Screen
         $this->exists = $category->exists;
 
         if($this->exists){
-            $this->name = 'Edit category';
+            $this->name = 'Редактировать категорию';
         }
 
 
@@ -44,7 +44,7 @@ class CategoryEditScreen extends Screen
      */
     public function name(): ?string
     {
-        return 'CategoryEditScreen';
+        return 'Категория';
     }
 
     /**
@@ -55,17 +55,17 @@ class CategoryEditScreen extends Screen
     public function commandBar(): iterable
     {
         return [
-            Button::make('Create category')
+            Button::make('Создать категорию')
                 ->icon('pencil')
                 ->method('createOrUpdate')
                 ->canSee(!$this->exists),
 
-            Button::make('Update')
+            Button::make('Обновить')
                 ->icon('note')
                 ->method('createOrUpdate')
                 ->canSee($this->exists),
 
-            Button::make('Remove')
+            Button::make('Удалить')
                 ->icon('trash')
                 ->method('remove')
                 ->canSee($this->exists),
@@ -80,9 +80,11 @@ class CategoryEditScreen extends Screen
     public function layout(): iterable
     {
         return [Layout::rows([
-            Input::make('category.title')
-                ->title('Title')
-                ->placeholder('Attractive but mysterious title'),
+            Input::make('category.name')
+                ->title('Название')
+                ->placeholder('Введите название категории'),
+            Picture::make('category.image')
+                ->title('Изображение категории'),
         ])];
     }
     /**
