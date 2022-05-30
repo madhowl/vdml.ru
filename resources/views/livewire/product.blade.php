@@ -1,6 +1,7 @@
 <div>
     <main class="main-content">
         <!--== Start Product Single Area Wrapper ==-->
+        <h1>{{$page_title}}</h1>
         <section class="product-area product-single-area">
             <div class="container pt-60 pb-0">
                 <div class="row">

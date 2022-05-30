@@ -5,7 +5,7 @@
             <h2>{{$page_title}}</h2>
             <ul>
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="/">Home</a>
                 </li>
                 <li>
                     <i class='bx bx-chevron-right'></i>

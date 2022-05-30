@@ -13,7 +13,7 @@ class Category extends Model
     use HasFactory,AsSource, Filterable;
 
     protected $fillable = [
-        'title',
+        'name',
         'slug'
     ];
     /**
@@ -22,7 +22,7 @@ class Category extends Model
      * @var array
      */
     protected $allowedSorts = [
-        'title',
+        'name',
     ];
     public function products()
     {

@@ -1,6 +1,6 @@
 @extends('audesk.layout')
 @section('title')
-    @parent
+    @include('audesk.parts.title',['page_title'=>session()->get('page_title')])
 @endsection
 @section('content')
     <section class="blog-area blog-area-two pt-100">

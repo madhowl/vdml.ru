@@ -1,5 +1,9 @@
 @extends('audesk.layout')
 
+@section('title')
+    @include('audesk.parts.title',['page_title'=>session()->get('page_title')])
+@endsection
+
 @section('content')
     <div class="blog-details-area pt-100 pb-70">
         <div class="blog-details-shape">
@@ -22,44 +26,7 @@
                         </div>
                         <div class="blog-details-category">
                             <h3>Category</h3>
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        Engineering Strategy
-                                        <i class='bx bx-right-arrow-alt'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        Modern  Autos
-                                        <i class='bx bx-right-arrow-alt'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        Newest Parts
-                                        <i class='bx bx-right-arrow-alt'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        System Service
-                                        <i class='bx bx-right-arrow-alt'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        Washing Service
-                                        <i class='bx bx-right-arrow-alt'></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        New Motor Service
-                                        <i class='bx bx-right-arrow-alt'></i>
-                                    </a>
-                                </li>
-                            </ul>
+                            <livewire:category />
                         </div>
                     </div>
                 </div>

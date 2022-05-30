@@ -49,9 +49,7 @@
 <!-- End Navbar Area -->
 
 <!-- Page Title -->
-@section('title')
-    @include('audesk.parts.title')
-@endsection
+@yield('title')
 <!-- End Page Title -->
 
 <!-- Content Grid -->
