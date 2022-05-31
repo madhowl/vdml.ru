@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Category;
 use App\Orchid\Presenters\CategoryPresenter;
+use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Orchid\Attachment\File;
@@ -16,8 +17,16 @@ use Symfony\Component\String\Slugger;
 
 class Product extends Model
 {
-    use HasFactory, AsSource, Attachable, Filterable;
+    use HasFactory, AsSource, Attachable, Filterable, Sluggable;
 
+    public function sluggable(): array
+    {
+        return [
+            'slug' => [
+                'source' => 'name'
+            ]
+        ];
+    }
     /**
      * The attributes that are mass assignable.
      *

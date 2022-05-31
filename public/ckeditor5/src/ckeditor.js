@@ -7,14 +7,12 @@ import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat.js';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote.js';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold.js';
 import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices.js';
-import Code from '@ckeditor/ckeditor5-basic-styles/src/code.js';
 import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock.js';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials.js';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading.js';
-import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline.js';
+import HtmlEmbed from '@ckeditor/ckeditor5-html-embed/src/htmlembed.js';
 import Image from '@ckeditor/ckeditor5-image/src/image.js';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption.js';
-import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert.js';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize.js';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle.js';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar.js';
@@ -34,10 +32,10 @@ import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting.
 import Table from '@ckeditor/ckeditor5-table/src/table.js';
 import TableCaption from '@ckeditor/ckeditor5-table/src/tablecaption.js';
 import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties';
+import TableColumnResize from '@ckeditor/ckeditor5-table/src/tablecolumnresize.js';
 import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar.js';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation.js';
-import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount.js';
 
 class Editor extends ClassicEditor {}
 
@@ -47,14 +45,12 @@ Editor.builtinPlugins = [
 	BlockQuote,
 	Bold,
 	CloudServices,
-	Code,
 	CodeBlock,
 	Essentials,
 	Heading,
-	HorizontalLine,
+	HtmlEmbed,
 	Image,
 	ImageCaption,
-	ImageInsert,
 	ImageResize,
 	ImageStyle,
 	ImageToolbar,
@@ -74,10 +70,10 @@ Editor.builtinPlugins = [
 	Table,
 	TableCaption,
 	TableCellProperties,
+	TableColumnResize,
 	TableProperties,
 	TableToolbar,
-	TextTransformation,
-	WordCount
+	TextTransformation
 ];
 
 // Editor configuration.
@@ -86,25 +82,24 @@ Editor.defaultConfig = {
 		items: [
 			'heading',
 			'|',
-			'removeFormat',
 			'bold',
 			'italic',
 			'link',
 			'bulletedList',
 			'numberedList',
+			'removeFormat',
 			'|',
 			'outdent',
 			'indent',
 			'|',
-			'imageUpload',
-			'blockQuote',
 			'insertTable',
+			'blockQuote',
+			'codeBlock',
+			'htmlEmbed',
+			'imageUpload',
 			'mediaEmbed',
 			'undo',
 			'redo',
-			'horizontalLine',
-			'imageInsert',
-			'codeBlock',
 			'sourceEditing'
 		]
 	},

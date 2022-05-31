@@ -1,49 +1,33 @@
 <div>
-    <main class="main-content">
-        <!--== Start Product Single Area Wrapper ==-->
-        <h1>{{$page_title}}</h1>
-        <section class="product-area product-single-area">
-            <div class="container pt-60 pb-0">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="product-single-item" data-margin-bottom="63">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <!--== Start Product Thumbnail Area ==-->
-                                    <div class="product-thumb">
-                                        <div class="zoom zoom-hover">
-                                            <a class="lightbox-image" data-fancybox="gallery" href="{{$product->image}}">
-                                                <img src="{{$product->image}}" alt="Image-HasTech">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!--== End Product Thumbnail Area ==-->
-                                </div>
-                                <div class="col-lg-6">
-                                    <!--== Start Product Info Area ==-->
-                                    <div class="product-single-info">
-                                        <h4 class="title">{{$product->name}}</h4>
-                                        <div class="prices">
-                                            <span class="price">{{$product->price}} руб.</span>
-                                        </div>
-                                        <p>{{$product->short_description}}</p>
-                                        <div class="product-action-simple">
-                                            <div class="payment-button">
-                                                <a wire:click.prevent="$emit('showModal', '{{$product->name}}')"
-                                                   href="/" class="btn-payment">Запросить стоимость</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--== End Product Info Area ==-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
+    <div class="service-details-item">
+        <div class="service-details-img">
+            <img src="{{$product->image}}" alt="{{$product->name}}">
+            <h3>{{$product->name}}</h3>
+            <div class="product-action-simple">
+                <div class="cmn-btn">
+                    <a wire:click.prevent="$emit('showModal', '{{$product->name}}')"
+                       href="/" class="banner-btn-left">
+                        <i class="bx bx-meteor"></i>
+                        Запросить стоимость
+                    </a>
+                </div>
+                <p>&nbsp;</p>
             </div>
-        </section>
-        <!--== End Product Single Area Wrapper ==-->
-    </main>
+            {!! $product->short_description!!}
+            {!! $product->description!!}
+            <div class="product-action-simple">
+                <p>&nbsp;</p>
+                <div class="cmn-btn">
+                    <a wire:click.prevent="$emit('showModal', '{{$product->name}}')"
+                       href="/" class="banner-btn-left">
+                        <i class="bx bx-meteor"></i>
+                        Запросить стоимость
+                    </a>
+                </div>
+                <p>&nbsp;</p>
+            </div>
+        </div>
+    </div>
     <livewire:modal />
 </div>

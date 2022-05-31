@@ -94,7 +94,6 @@
 				</div></div>
 			</div>
 		</main>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
 		<footer>
 			<p><a href="https://ckeditor.com/ckeditor-5/" target="_blank" rel="noopener">CKEditor 5</a>
 				– Rich text editor of tomorrow, available today
@@ -106,16 +105,24 @@
 		</footer>
 		<script src="../build/ckeditor.js"></script>
 		<script>ClassicEditor
-				.create( document.querySelector( 'textarea' ), {
+				.create( document.querySelector( '.editor' ), {
+					
 					licenseKey: '',
+					
+					
+					
 				} )
 				.then( editor => {
 					window.editor = editor;
+			
+					
+					
+					
 				} )
 				.catch( error => {
 					console.error( 'Oops, something went wrong!' );
 					console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
-					console.warn( 'Build id: ug7dh21ss5yr-whvpkz9mf9au' );
+					console.warn( 'Build id: a6jn17xxhg14-8rynopa7p70o' );
 					console.error( error );
 				} );
 		</script>

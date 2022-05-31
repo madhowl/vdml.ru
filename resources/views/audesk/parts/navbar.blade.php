@@ -24,7 +24,7 @@
                         <li class="nav-item">
                             <a href="#" class="nav-link">Контакты</a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="#" class="nav-link dropdown-toggle active">Новости</a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item">
@@ -75,7 +75,7 @@
                                     <a href="terms-and-conditions.html" class="nav-link">Terms & Conditions</a>
                                 </li>
                             </ul>
-                        </li>
+                        </li>--}}
                     </ul>
                 </div>
             </nav>

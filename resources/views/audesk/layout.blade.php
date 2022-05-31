@@ -22,9 +22,11 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="{{asset('/assets/css/responsive.css')}}">
 
-    <title>Audeck - Auto Service and Car Repair HTML Template</title>
+    <title>ООО "ВЛАДМЕТАЛЛ" - Поставщик промышленного оборудования для пищевых производств</title>
 
     <link rel="icon" type="image/png" href="{{asset('/assets/img/favicon.png')}}">
+
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.3/plyr.css" />
     <!--== Livewire CSS ==-->
     <livewire:styles />
 </head>
@@ -83,7 +85,12 @@
 <script src="{{asset('/assets/js/wow.min.js')}}"></script>
 <!-- Custom JS -->
 <script src="{{asset('/assets/js/custom.js')}}"></script>
+
+<script src="https://cdn.plyr.io/3.6.3/plyr.js"></script>
 <!--=== Livewire Js ===-->
 <livewire:scripts />
+<script>
+    const player = new Plyr('#player');
+</script>
 </body>
 </html>

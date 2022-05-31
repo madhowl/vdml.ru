@@ -108,11 +108,12 @@ return [
     |
     */
 
+
     'resource' => [
         'stylesheets' => [],
         //'scripts'     => [],
-        'scripts'     => ['/ckeditor/ckeditor.js','/ckeditor/config.js'],
-        //'scripts'     => ['/ckeditor5/build/ckeditor.js','/ckeditor5/build/config.js'],
+        //'scripts'     => ['/ckeditor/ckeditor.js','/ckeditor/config.js'],
+        'scripts'     => ['/ckeditor5/build/ckeditor.js','/ckeditor5/build/config.js'],
     ],
 
     /*
