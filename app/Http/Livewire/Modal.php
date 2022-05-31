@@ -66,7 +66,7 @@ class Modal extends Component
         // Do Something With Your Modal
         $this->validate();
         $comment = 'Это сообщение отправлено из формы обратной связи отправителем по имени '.$this->name;
-        $toEmail = "madhowl@yandex";
+        $toEmail = "aleks.gromykin.02@mail.ru";
         Mail::to($toEmail)->send(new RequestPrice($comment));
         //return 'Сообщение отправлено на адрес '. $toEmail;
 
