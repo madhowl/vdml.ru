@@ -30,4 +30,18 @@ class FrontController extends Controller
             'catalog' =>$products
         ]);
     }
+
+    public function contact()
+    {
+        $page_title = 'Контакты';
+        session()->put('page_title',$page_title);
+        return view('audesk.contact');
+    }
+
+    public function about()
+    {
+        $page_title = 'О КОМПАНИИ';
+        session()->put('page_title',$page_title);
+        return view('audesk.about');
+    }
 }

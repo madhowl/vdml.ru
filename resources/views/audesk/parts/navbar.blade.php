@@ -19,10 +19,10 @@
                             <a href="/" class="nav-link ">Каталог</a>
                         </li>
                         <li class="nav-item">
-                            <a href="about.html" class="nav-link">О компании</a>
+                            <a href="{{ route ('about') }}" class="nav-link">О компании</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Контакты</a>
+                            <a href="{{ route ('contact') }}" class="nav-link">Контакты</a>
                         </li>
                         {{-- <li class="nav-item">
                             <a href="#" class="nav-link dropdown-toggle active">Новости</a>

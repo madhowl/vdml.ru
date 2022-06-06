@@ -909,7 +909,7 @@ button:focus {
 }
 
 .feature-area .feature-img img {
-  display: none;
+  display: block;
 }
 
 .feature-area .feature-shape img {

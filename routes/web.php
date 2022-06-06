@@ -20,17 +20,11 @@ Route::get('/', function () {
     return view('audesk.categories');
 });*/
 Route::get('/product/{slug}', App\Http\Livewire\Product::class)->name('product');
-Route::get('/',[\App\Http\Controllers\FrontController::class,'catalogGrid']);
+Route::get('/',[\App\Http\Controllers\FrontController::class,'catalogGrid'])->name ('catalog');
 Route::get('/category/{slug}',[\App\Http\Controllers\FrontController::class,'productInCategoryGrid'])->name('productInCategoryGrid');
-/*Route::get('/cart3', function () {
-    return view('cart');
-});*/
-Route::get('/about', function () {
-    return view('about');
-});
-Route::get('/contact', function () {
-    return view('contact');
-});
+
+Route::get('/contact',[\App\Http\Controllers\FrontController::class,'contact'])->name('contact');
+Route::get('/about',[\App\Http\Controllers\FrontController::class,'about'])->name('about');
 
 Route::get('/single-product/{slug}',[\App\Http\Controllers\ProductController::class,'singleProduct'])->name('single-product');
 Route::get('/cart',[\App\Http\Controllers\CartController::class,'index'])->name('cart');
