@@ -42,6 +42,9 @@ class FrontController extends Controller
     {
         $page_title = 'О КОМПАНИИ';
         session()->put('page_title',$page_title);
-        return view('audesk.about');
+        $rand_products = Product::inRandomOrder()
+            ->limit(4)
+            ->get();
+        return view('audesk.about',compact ('rand_products'));
     }
 }

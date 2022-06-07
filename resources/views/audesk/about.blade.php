@@ -1,7 +1,7 @@
 @extends('audesk.layout')
 
 @section('title')
-    @include('audesk.parts.title',['page_title'=>session()->get('page_title')])
+
 @endsection
 
 @section('content')
@@ -66,11 +66,6 @@
         </div>
     </div>
     <!-- End Address -->
-
-
-
-
-
     <!-- Quality -->
     <section class="quality-area quality-area-two">
         <div class="quality-img">
@@ -96,7 +91,36 @@
         </div>
     </section>
     <!-- End Quality -->
-
+    <!-- Parts -->
+    <section class="parts-area ptb-100">
+        <div class="container">
+            <div class="section-title">
+                <span class="sub-title">Новинки</span>
+                <h2>Мы рекомендуем</h2>
+            </div>
+            <div class="row">
+                @foreach($rand_products as $item)
+                <div class="col-sm-6 col-lg-3">
+                    <div class="parts-item">
+                        <div class="parts-top">
+                            <img src="{{$item->image}}" alt="Parts">
+                        </div>
+                        <h3>{{$item->name}}</h3>
+                        <div class="cmn-btn">
+                            <a class="banner-btn-left" href="cart.html">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+            <div class="parts-view">
+                <a href="{{route ('catalog')}}">Перейти в каталог</a>
+            </div>
+        </div>
+    </section>
+    <!-- End Parts -->
 
     <!-- Feature -->
     <div class="feature-area">
@@ -138,7 +162,17 @@
     <!-- End Feature -->
 
 
+    <!-- Pricing -->
+    <section class="pricing-area pt-100 pb-70">
+        <div class="container">
+            <div class="section-title">
+                <span class="sub-title">Отзывы</span>
+                <h2>Что о нас говорят</h2>
+            </div>
 
+        </div>
+    </section>
+    <!-- End Pricing -->
 
 
     <!-- Review -->
@@ -157,20 +191,41 @@
                     <div class="review-slider owl-theme owl-carousel">
                         <div class="review-item">
                             <i class='bx bxs-quote-right'></i>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan.</p>
+                            <p>Выражаем благодарность всем сотрудникам ООО «Владметал» за качественно выполненную работу по производству и поставке аппарата выдува Пэт-тары, всё поставлено в срок.</p>
                             <div class="review-inner">
-                                <img src="assets/img/home-one/review/reviewer-one.png" alt="Review">
-                                <h3>Sarah Tylor</h3>
-                                <span>Designer</span>
+                                <img src="{{asset('/image/avatar/1.jpg')}}" alt="Review">
+                                <h3>Милованов Василий Николаевич</h3>
+                                <span>Генеральный директор ООО «Заозёрный», Камчатский край, Россия</span>
                             </div>
                         </div>
                         <div class="review-item">
                             <i class='bx bxs-quote-right'></i>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+                            <p> Выражаю благодарность всему коллективу ООО «Владметал» за качественный подбор и своевременную поставку оборудования для переработки молока и производства сыров и масла. </p>
+                            <p>Опираясь на наш опыт сотрудничества, готов рекомендовать ООО «Владметал» как надежную и компетентную в своей области компанию. </p>
                             <div class="review-inner">
-                                <img src="assets/img/home-one/review/reviewer-one.png" alt="Review">
-                                <h3>Tom Henry</h3>
-                                <span>CEO</span>
+                                <img src="{{asset('/image/avatar/2.jpg')}}" alt="Review">
+                                <h3>Охлынин Сергей Владимирович</h3>
+                                <span>Индивидуальный предприниматель, Тверская область, Россия</span>
+                            </div>
+                        </div>
+                        <div class="review-item">
+                            <i class='bx bxs-quote-right'></i>
+                            <p>ЗАО «Авангард» выражает свою благодарность всему коллективу ООО «Владметал» за качественный подбор и своевременную поставку за своевременную поставку и монтаж Модульного молочного цеха  </p>
+                            <p>Особо хочется отметить оперативную реакцию Сервисного центра, на возникающие вопросы и их решение.  </p>
+                            <div class="review-inner">
+                                <img src="{{asset('/image/avatar/3.jpg')}}" alt="Review">
+                                <h3>Кушкин Сергей Александрович</h3>
+                                <span>Генеральный директор ЗАО «Авангард», Красноярский край, Россия</span>
+                            </div>
+                        </div>
+                        <div class="review-item">
+                            <i class='bx bxs-quote-right'></i>
+                            <p>ООО «ЕвроЛайн» выражает свою благодарность всем сотрудникам ООО «Владметал» за подбор и поставку оборудования для переработки рыбы, выполненные в самые сжатые сроки согласно условиям договора. </p>
+                            <p>ООО «ЕвроЛайн» будет рекомендовать ООО «Владметал» как ответственную, надежную и компетентную компанию. </p>
+                            <div class="review-inner">
+                                <img src="{{asset('/image/avatar/4.jpg')}}" alt="Review">
+                                <h3>Анатолий Иванович Мохов</h3>
+                                <span>Исполнительный директор ООО «ЕвроЛайн», Сахалинская область, Россия</span>
                             </div>
                         </div>
                     </div>
@@ -184,278 +239,36 @@
         </div>
     </div>
     <!-- End Review -->
-
-    <!-- Pricing -->
+    <!-- Address -->
     <section class="pricing-area pt-100 pb-70">
         <div class="container">
             <div class="section-title">
-                <span class="sub-title">pricing</span>
-                <h2>Our Pricing Plan</h2>
+                <span class="sub-title">Видео</span>
+                <h2>Наше новое видео</h2>
             </div>
             <div class="row">
                 <div class="col-sm-6 col-lg-4">
-                    <div class="pricing-item">
-                        <div class="pricing-top">
-                            <h3>Basic Pack</h3>
-                            <p><span class="dollar">$</span>39<span class="month">/month</span></p>
-                        </div>
-                        <div class="pricing-middle">
-                            <i class='bx bx-rocket'></i>
-                        </div>
-                        <div class="pricing-bottom">
-                            <ul>
-                                <li>
-                                    <i class='bx bx-check-circle'></i>
-                                    Up to 3 chat operators
-                                </li>
-                                <li>
-                                    <i class='bx bx-check-circle'></i>
-                                    200 ChatBot Triggers
-                                </li>
-                                <li>
-                                    <i class='bx bx-check-circle'></i>
-                                    Quick Responses
-                                </li>
-                                <li>
-                                    <i class='bx bx-check-circle'></i>
-                                    Google Analytics
-                                </li>
-                                <li>
-                                    <i class='bx bx-check-circle'></i>
-                                    Messenger Integration
-                                </li>
-                                <li>
-                                    <i class='bx bx-x'></i>
-                                    Email Integration
-                                </li>
-                                <li>
-                                    <i class='bx bx-x'></i>
-                                    Mobile + Desktop Apps
-                                </li>
-                                <li>
-                                    <i class='bx bx-x'></i>
-                                    Drag & Drop Widgets
-                                </li>
-                            </ul>
-                            <div class="cmn-btn">
-                                <a class="banner-btn-left" href="#">
-                                    Get Started
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <iframe  src="https://www.youtube.com/embed/W66Ny1J0Qfk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="col-sm-6 col-lg-4">
-                    <div class="pricing-item">
-                        <div class="pricing-top">
-                            <h3>Standard Pack</h3>
-                            <p><span class="dollar">$</span>69<span class="month">/month</span></p>
-                        </div>
-                        <div class="pricing-middle">
-                            <i class='bx bx-rocket'></i>
-                        </div>
-                        <div class="pricing-bottom">
-                            <ul>
-                                <li>
-                                    <i class='bx bx-check-circle'></i>
-                                    Up to 3 chat operators
-                                </li>
-                                <li>
-                                    <i class='bx bx-check-circle'></i>
-                                    200 ChatBot Triggers
-                                </li>
-                                <li>
-                                    <i class='bx bx-check-circle'></i>
-                                    Quick Responses
-                                </li>
-                                <li>
-                                    <i class='bx bx-check-circle'></i>
-                                    Google Analytics
-                                </li>
-                                <li>
-                                    <i class='bx bx-check-circle'></i>
-                                    Messenger Integration
-                                </li>
-                                <li>
-                                    <i class='bx bx-check-circle'></i>
-                                    Email Integration
-                                </li>
-                                <li>
-                                    <i class='bx bx-x'></i>
-                                    Mobile + Desktop Apps
-                                </li>
-                                <li>
-                                    <i class='bx bx-x'></i>
-                                    Drag & Drop Widgets
-                                </li>
-                            </ul>
-                            <div class="cmn-btn">
-                                <a class="banner-btn-left" href="#">
-                                    Get Started
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <iframe  src="https://www.youtube.com/embed/i_1eGmYW-b4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="col-sm-6 offset-sm-3 offset-lg-0 col-lg-4">
-                    <div class="pricing-item">
-                        <div class="pricing-top">
-                            <h3>Premium Pack</h3>
-                            <p><span class="dollar">$</span>99<span class="month">/month</span></p>
-                        </div>
-                        <div class="pricing-middle">
-                            <i class='bx bx-rocket'></i>
-                        </div>
-                        <div class="pricing-bottom">
-                            <ul>
-                                <li>
-                                    <i class='bx bx-check-circle'></i>
-                                    Up to 3 chat operators
-                                </li>
-                                <li>
-                                    <i class='bx bx-check-circle'></i>
-                                    200 ChatBot Triggers
-                                </li>
-                                <li>
-                                    <i class='bx bx-check-circle'></i>
-                                    Quick Responses
-                                </li>
-                                <li>
-                                    <i class='bx bx-check-circle'></i>
-                                    Google Analytics
-                                </li>
-                                <li>
-                                    <i class='bx bx-check-circle'></i>
-                                    Messenger Integration
-                                </li>
-                                <li>
-                                    <i class='bx bx-check-circle'></i>
-                                    Email Integration
-                                </li>
-                                <li>
-                                    <i class='bx bx-check-circle'></i>
-                                    Mobile + Desktop Apps
-                                </li>
-                                <li>
-                                    <i class='bx bx-check-circle'></i>
-                                    Drag & Drop Widgets
-                                </li>
-                            </ul>
-                            <div class="cmn-btn">
-                                <a class="banner-btn-left" href="#">
-                                    Get Started
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <iframe  src="https://www.youtube.com/embed/2XGHHO66veg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Pricing -->
-
-    <!-- Blog -->
-    <section class="blog-area pt-100">
+    <div class="address-area">
         <div class="container">
-            <div class="section-title">
-                <span class="sub-title">blog</span>
-                <h2>Our Latest Blogs</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 col-lg-4">
-                    <div class="blog-item">
-                        <div class="blog-top">
-                            <div class="blog-date">
-                                <p>21</p>
-                                <span>Feb</span>
-                            </div>
-                            <a href="blog-details.html">
-                                <img src="assets/img/home-one/blog/1.jpg" alt="Blog">
-                            </a>
-                        </div>
-                        <div class="blog-bottom">
-                            <h3>
-                                <a href="blog-details.html">The next genaration IT will change the world</a>
-                            </h3>
-                            <ul>
-                                <li>
-                                    <img src="assets/img/home-one/blog/1.png" alt="Blog">
-                                    <a href="#">Aikin Ward</a>
-                                </li>
-                                <li>
-                                    <a href="blog-details.html">Read More
-                                        <i class='bx bx-chevron-right'></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <div class="blog-item">
-                        <div class="blog-top">
-                            <div class="blog-date">
-                                <p>22</p>
-                                <span>Feb</span>
-                            </div>
-                            <a href="blog-details.html">
-                                <img src="assets/img/home-one/blog/2.jpg" alt="Blog">
-                            </a>
-                        </div>
-                        <div class="blog-bottom">
-                            <h3>
-                                <a href="blog-details.html">Content writing demand day by day increasing</a>
-                            </h3>
-                            <ul>
-                                <li>
-                                    <img src="assets/img/home-one/blog/2.png" alt="Blog">
-                                    <a href="#">Tom Smith</a>
-                                </li>
-                                <li>
-                                    <a href="blog-details.html">Read More
-                                        <i class='bx bx-chevron-right'></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 offset-sm-3 offset-lg-0 col-lg-4">
-                    <div class="blog-item">
-                        <div class="blog-top">
-                            <div class="blog-date">
-                                <p>23</p>
-                                <span>Feb</span>
-                            </div>
-                            <a href="blog-details.html">
-                                <img src="assets/img/home-one/blog/3.jpg" alt="Blog">
-                            </a>
-                        </div>
-                        <div class="blog-bottom">
-                            <h3>
-                                <a href="blog-details.html">Don't buy a tech gift until you read these rules image</a>
-                            </h3>
-                            <ul>
-                                <li>
-                                    <img src="assets/img/home-one/blog/1.png" alt="Blog">
-                                    <a href="#">Sarah Tylor</a>
-                                </li>
-                                <li>
-                                    <a href="blog-details.html">Read More
-                                        <i class='bx bx-chevron-right'></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="parts-view">
-                <a href="blog.html">View All</a>
-            </div>
+
+
         </div>
-    </section>
-    <!-- End Blog -->
+    </div>
+    <!-- End Address -->
+
+
+
+
 
 @endsection
