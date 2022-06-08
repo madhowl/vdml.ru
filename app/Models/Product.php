@@ -8,6 +8,7 @@ use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Orchid\Attachment\File;
+use Orchid\Metrics\Chartable;
 use Orchid\Screen\AsSource;
 use Orchid\Attachment\Attachable;
 use Orchid\Attachment\Models\Attachment;
@@ -17,7 +18,7 @@ use Symfony\Component\String\Slugger;
 
 class Product extends Model
 {
-    use HasFactory, AsSource, Attachable, Filterable, Sluggable;
+    use HasFactory, AsSource, Attachable, Filterable, Sluggable, Chartable;
 
     public function sluggable(): array
     {

@@ -26,14 +26,14 @@ class ProductEditScreen extends Screen
      *
      * @var string
      */
-    public $name = 'Creating a new product';
+    public $name = 'Создание продукта';
 
     /**
      * Display header description.
      *
      * @var string
      */
-    public $description = 'Products';
+    public $description = '';
 
     /**
      * @var bool
@@ -69,7 +69,7 @@ class ProductEditScreen extends Screen
      */
     public function name(): ?string
     {
-        return 'ProductEditScreen';
+        return 'Создание продукта';
     }
 
     /**
@@ -80,17 +80,17 @@ class ProductEditScreen extends Screen
     public function commandBar(): array
     {
         return [
-            Button::make('Create product')
+            Button::make('Создать продукт')
                 ->icon('pencil')
                 ->method('createOrUpdate')
                 ->canSee(!$this->exists),
 
-            Button::make('Update')
+            Button::make('Обновить')
                 ->icon('note')
                 ->method('createOrUpdate')
                 ->canSee($this->exists),
 
-            Button::make('Remove')
+            Button::make('Удалить')
                 ->icon('trash')
                 ->method('remove')
                 ->canSee($this->exists),
@@ -126,7 +126,7 @@ class ProductEditScreen extends Screen
               //  Quill::make('product.body')
                    // ->title('Main text'),
                 Picture::make('product.image')
-                    ->title('All files'),
+                    ->title('Изображения'),
                 TextArea::make('product.description')
                     ->title('Описание')
                     ->rows(5)

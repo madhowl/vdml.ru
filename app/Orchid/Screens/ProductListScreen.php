@@ -14,14 +14,14 @@ class  ProductListScreen extends Screen
  *
  * @var string
  */
-    public $name = 'Product';
+    public $name = 'Товары';
 
     /**
      * Display header description.
      *
      * @var string
      */
-    public $description = 'Products';
+    public $description = '';
 
     /**
      * Query data.
@@ -43,7 +43,7 @@ class  ProductListScreen extends Screen
     public function commandBar(): array
     {
         return [
-            Link::make('Create new')
+            Link::make('Добавить товар')
                 ->icon('pencil')
                 ->route('platform.product.edit')
         ];

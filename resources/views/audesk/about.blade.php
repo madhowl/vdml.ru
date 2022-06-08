@@ -178,10 +178,10 @@
     <!-- Review -->
     <div class="review-area">
         <div class="review-shape">
-            <img src="assets/img/home-one/review/review-shape.png" alt="Review">
+
         </div>
         <div class="video-wrap">
-            <a href="https://www.youtube.com/watch?v=aqz-KE-bpKQ" class="popup-youtube">
+            <a href="https://www.youtube.com/watch?v=uzWPFtSw4WI" class="popup-youtube">
                 <i class='bx bx-play'></i>
             </a>
         </div>
@@ -201,7 +201,7 @@
                         <div class="review-item">
                             <i class='bx bxs-quote-right'></i>
                             <p> Выражаю благодарность всему коллективу ООО «Владметалл» за качественный подбор и своевременную поставку оборудования для переработки молока и производства сыров и масла. </p>
-                            <p>Опираясь на наш опыт сотрудничества, готов рекомендовать ООО «Владметалл» как надежную и компетентную в своей области компанию. </p>
+
                             <div class="review-inner">
                                 <img src="{{asset('/image/avatar/2.jpg')}}" alt="Review">
                                 <h3>Охлынин Сергей Владимирович</h3>
@@ -211,7 +211,7 @@
                         <div class="review-item">
                             <i class='bx bxs-quote-right'></i>
                             <p>ЗАО «Авангард» выражает свою благодарность всему коллективу ООО «Владметалл» за качественный подбор и своевременную поставку за своевременную поставку и монтаж Модульного молочного цеха  </p>
-                            <p>Особо хочется отметить оперативную реакцию Сервисного центра, на возникающие вопросы и их решение.  </p>
+
                             <div class="review-inner">
                                 <img src="{{asset('/image/avatar/3.jpg')}}" alt="Review">
                                 <h3>Кушкин Сергей Александрович</h3>
@@ -221,7 +221,7 @@
                         <div class="review-item">
                             <i class='bx bxs-quote-right'></i>
                             <p>ООО «ЕвроЛайн» выражает свою благодарность всем сотрудникам ООО «Владметалл» за подбор и поставку оборудования для переработки рыбы, выполненные в самые сжатые сроки согласно условиям договора. </p>
-                            <p>ООО «ЕвроЛайн» будет рекомендовать ООО «Владметалл» как ответственную, надежную и компетентную компанию. </p>
+
                             <div class="review-inner">
                                 <img src="{{asset('/image/avatar/4.jpg')}}" alt="Review">
                                 <h3>Анатолий Иванович Мохов</h3>
@@ -232,7 +232,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="review-bg">
-                        <img src="assets/img/home-one/review/review-right.jpg" alt="Review">
+                        <img src="{{asset('/image/121.jpeg')}}" alt="Review">
                     </div>
                 </div>
             </div>

@@ -28,20 +28,20 @@ class PlatformProvider extends OrchidServiceProvider
     public function registerMainMenu(): array
     {
         return [
-            Menu::make('Example screen')
+           /* Menu::make('Example screen')
                 ->icon('monitor')
                 ->route('platform.example')
                 ->title('Navigation')
                 ->badge(function () {
                     return 6;
-                }),
-            Menu::make('Products')
+                }),*/
+            Menu::make('Товары')
                 ->icon('paper-clip')
                 ->route('platform.product.list'),
-            Menu::make('Categories')
+            Menu::make('Категории')
                 ->icon('options')
                 ->route('platform.category.list'),
-            Menu::make('Statuses')
+            /*Menu::make('Statuses')
                 ->icon('social-vkontakte')
                 ->route('platform.status.list'),
             Menu::make('Orders')
@@ -52,7 +52,7 @@ class PlatformProvider extends OrchidServiceProvider
                 ->list([
                     Menu::make('Sub element item 1')->icon('bag'),
                     Menu::make('Sub element item 2')->icon('heart'),
-                ]),
+                ]),*/
 
           /*  Menu::make('Basic Elements')
                 ->title('Form controls')
@@ -94,13 +94,13 @@ class PlatformProvider extends OrchidServiceProvider
                     return Dashboard::version();
                 }, Color::DARK()),*/
 
-            Menu::make(__('Users'))
+            Menu::make(__('Пользователи'))
                 ->icon('user')
                 ->route('platform.systems.users')
                 ->permission('platform.systems.users')
                 ->title(__('Access rights')),
 
-            Menu::make(__('Roles'))
+            Menu::make(__('Роли пользователей'))
                 ->icon('lock')
                 ->route('platform.systems.roles')
                 ->permission('platform.systems.roles'),
@@ -113,7 +113,7 @@ class PlatformProvider extends OrchidServiceProvider
     public function registerProfileMenu(): array
     {
         return [
-            Menu::make('Profile')
+            Menu::make('Профиль')
                 ->route('platform.profile')
                 ->icon('user'),
         ];

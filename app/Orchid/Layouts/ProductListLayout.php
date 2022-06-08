@@ -42,12 +42,12 @@ class ProductListLayout extends Table
                 }),
 //            TD::make('price', 'Стоимость')
 //                ->sort(),
-            TD::make('category_id', 'Category')
+            TD::make('category_id', 'Категория')
                 ->render(function (Product $product){
                     return $product->presenter()->categoryName();
                 })
                 ->sort(),
-            TD::make('image', 'Image')
+            TD::make('image', 'Изображение товара')
                 ->render(function (Product $product){
                     return "<img src='{$product->image}'
                               alt='sample'
